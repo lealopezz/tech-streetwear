@@ -1,0 +1,99 @@
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+/* ------HEADER------ */
+.main-header_title{
+    text-align: center;
+    font-size: 1.7em;
+    margin: 10px 0;
+    padding-left: 35px;
+    cursor: pointer;
+}
+.main-header_txt{
+    text-align: center;
+    background-color: whitesmoke;
+    color: #1c1b1b;
+    font-size: 0.7em;
+    padding: 8px;
+}
+.main-nav{
+    display: none;
+}
+.container, .main-header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    background-color: #1c1b1b;
+    color: whitesmoke;
+    padding: 0 20px;
+    position: relative;
+}
+.main-header_login{
+    display: none;
+}
+.main-header_btn{
+    display:block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.btn-menu{
+    font-size: 1.3em;
+}
+.main-header_input input{
+    display: none;
+}
+
+
+/* -----Sidebar----- */
+.sidebar-menu{
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: rgb(47, 54, 64);
+    height: 100%;
+    width: 70%;
+    padding: 10px 0;
+    transform: translateX(-400px);
+    transition: transform 500ms ease-in-out;
+}
+.menu-item{
+    color: whitesmoke;
+    display: block;
+    text-align: left;
+    padding: 10px 0;
+    margin: 10px 20px;
+}
+.show{
+    transform: translateX(0px);
+    transition: transform 500ms ease-in-out;
+}
+
+/* ------BANNER------ */
+.banner{
+    position: relative;
+}
+.banner-content{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    font-size: 0.8em;
+    transform: translate(-50%,-50%);
+}
+.banner-content p,.banner-content h2{
+    /* padding: 15px 0; */
+    margin: 10px 0;
+    color: whitesmoke;
+}
+.banner-link{
+    position: absolute;
+    top:110%;
+    color: black;
+    font-size: 0.8em;
+    background-color:whitesmoke;
+    padding: 10px 30px;
+}

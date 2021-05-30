@@ -1,79 +1,170 @@
-a{
-    text-decoration: none;
+a{text-decoration: none;}
+body{
+    font-family: 'Spartan', sans-serif;
+}
+.container-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #2c2b2b;
+    height: 70px;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+}
+.header-nav{
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+.header-title{
+    display: block;
+    position: absolute;
+    left: 40%;
+    top: 0;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.1em;
+    align-items: center;
+}
+.header-icons{
+
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 5px;
+}
+.header-link{
     color: whitesmoke;
+    padding: 0 7px;
 }
-/* ------HEADER------ */
-.main-header_title{
-    text-align: center;
-    font-size: 1.7em;
-    margin: 10px 0;
-    padding-left: 35px;
-    cursor: pointer;
+.header-icons .header-link{
+    font-size: 1.3em;
 }
-.main-header_txt{
-    text-align: center;
-    background-color: whitesmoke;
-    color: #1c1b1b;
-    font-size: 0.7em;
-    padding: 8px;
-}
-.main-nav{
+.header-acc{
     display: none;
 }
-.container, .main-header_container{
+/* ------NAV------ */
+.menu, .submenu{
+    padding: 0;
+    margin: 0;
+}
+.header_txt{
+    text-align: center;
+    background-color: whitesmoke;
+    color: #2c2b2b;
+    font-size: 0.6em;
+    height: 15px;
+}
+.btnMenu{
+    font-size: 1.3em;
+    padding-left: 10px;
+    color: whitesmoke;
+    background-color: #2c2b2b;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    top: 85px;
+    left: 0;
+    background: #2c2b2b;
+    width:65%;
+    height: 100%;
+    margin-left: -100%;
+    z-index: 999;
+    transition: all 250ms ease-in-out;
+}
+.menu-item{
+    margin-bottom: 10px;
+}
+.menu-link{
+    display: block;
+    padding:5px 15px;
+    margin-top: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.submenu{
+    height: 0;
+    overflow: hidden;
+    transition: all 250ms;
+}
+.submenu-btn{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.container{
-    background-color: #1c1b1b;
-    color: whitesmoke;
-    padding: 0 20px;
-    position: relative;
+.submenu .menu-link{
+    background: #2c2b2b;
+    padding-left: 50px;
+    color: #9c9b9b;   
 }
-.main-header_login{
-    display: none;
-}
-.main-header_btn{
-    display:block;
-    margin: 0 10px;
-    cursor: pointer;
-}
-.btn-menu{
-    font-size: 1.3em;
-}
-.main-header_input input{
-    display: none;
-}
-
-
-/* -----Sidebar----- */
-.sidebar-menu{
-    display: block;
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    background: rgb(47, 54, 64);
-    height: 100%;
-    width: 70%;
-    padding: 10px 0;
-    transform: translateX(-100%);
-    transition: transform 500ms ease-in-out;
-}
-.menu-item{
-    color: whitesmoke;
-    display: block;
-    text-align: left;
-    padding: 10px 0;
-    margin: 10px 20px;
+.submenu .menu-link:hover{
+    color:whitesmoke;
 }
 .show{
-    transform: translateX(0px);
-    transition: transform 500ms ease-in-out;
+    margin-left: 0;
+}
+@media (min-width:1024px){
+    .header_txt{
+        font-size: 0.75em;
+        padding: 10px;
+        height: auto;
+    }
+    .container-flex{
+        height: 150px;
+        padding:15px 30px;
+        align-items: flex-end;
+    }
+    .header-title{
+        font-size: 2em;
+    }
+    .header-icons{
+        gap: 15px;
+        padding-right: 30px;
+    }
+    .header-acc{
+        display: block;
+    }
+    .btnMenu{
+        display: none;
+    }
+    .menu{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        height: auto;
+        width: 100%;
+    }
+    .menu-link, .menu-item{
+        margin:0;
+    }
+    .container-submenu{
+        position: relative;
+    }
+    .submenu{
+        position: absolute;
+        width: 200px;
+        margin: 0;
+        overflow: visible;
+        z-index: 9999;
+        background: #3c3b3b;
+        opacity: 0;
+        visibility: hidden; 
+    }
+    .container-submenu:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
-/* ------BANNER------ */
+
+
+
+/* ------BANER------ */
 .banner{
     position: relative;
 }
@@ -92,7 +183,6 @@ a{
     display: none;
 }
 .banner-content p,.banner-content h2{
-    /* padding: 15px 0; */
     margin: 10px 0;
     color: whitesmoke;
 }
@@ -104,13 +194,7 @@ a{
     background-color:whitesmoke;
     padding: 10px 30px;
 }
-
-
-/* ------MEDIA------ */
-@media (min-width:769px){
-    .sidebar-menu{
-        display: none;
-    }
+@media(min-width:767px){
     .banner-img1{
         display: none;
     }
@@ -126,3 +210,5 @@ a{
         transform: translate(-50%,-50%);
     }
 }
+
+/* HACER BREAKPOINT A LOS 367 +- */

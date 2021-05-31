@@ -104,8 +104,9 @@ body{
     align-items: center;
 }
 .submenu .menu-link{
+    font-size: 0.9em;
     background: var(--grey);
-    padding-left: 50px;
+    padding-left:  50px;
     color: #9c9b9b;   
 }
 .submenu .menu-link:hover{
@@ -412,15 +413,20 @@ footer{
         opacity: 0;
         visibility: hidden; 
     }
+    .submenu .menu-link{
+        padding-left: 40px;
+        padding-bottom: 15px;
+    }
     .container-submenu:hover .submenu {
         opacity: 1;
         visibility: visible;
     }
     .fa-angle-down{
         transition: all 300ms;
+        rotate: 90deg;
     }
     .container-submenu:hover .fa-angle-down{
-        rotate: 90deg;
+        rotate: 0deg;
         transition: all 300ms;
     }
         /* --ARRIVALS--- */

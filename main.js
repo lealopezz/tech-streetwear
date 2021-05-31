@@ -5,6 +5,7 @@ btnMenu.addEventListener('click',function(){
 });
 
 const subMenuBtn = document.querySelectorAll('.submenu-btn');
+// const angleDown = document.getElementById('angleDown');
 for(let i=0;i<subMenuBtn.length;i++){
     subMenuBtn[i].addEventListener('click', function(){
         if(window.innerWidth < 1024){
@@ -13,10 +14,14 @@ for(let i=0;i<subMenuBtn.length;i++){
             
             if (subMenu.classList.contains('desplegar')) {
                 subMenu.classList.remove('desplegar');
+                // angleDown.style.transform = 'rotate(0deg)';
+                // angleDown.style.transition = 'transform 200ms';
                 subMenu.removeAttribute('style');
             } else {   
                 subMenu.classList.add('desplegar');
                 subMenu.style.height = height + "px";
+                // angleDown.style.transform = 'rotate(90deg)';
+                // angleDown.style.transition = 'transform 200ms';
             }
         }
     })

@@ -1,5 +1,5 @@
 :root{
-    --grey:#1c1b1b;
+    --grey:rgb(28, 27, 27);
     --white:#f2f2f2;
     --backwhite:rgb(250, 249, 249);
 }
@@ -10,6 +10,7 @@ body{
     font-family: 'Spartan', sans-serif;
     background-color: var(--backwhite);
     letter-spacing: .05em;
+    position: relative;
 }
 .container-flex{
     display: flex;
@@ -230,6 +231,10 @@ body{
 
 .arrival{
     position: relative;
+    transition: all 500ms ease-in-out;
+}
+.arrival:hover{
+    transform: scale(1.1);
 }
 .arrival-content{
     position: absolute;
@@ -310,6 +315,10 @@ body{
     color: var(--grey);
     display: block;
     text-align: center;
+    transition: all 100ms ease-in-out;
+}
+.social-item:hover{
+    transform: scale(1.25);
 }
 
 
@@ -437,6 +446,33 @@ footer{
     color: var(--grey);
 }
 
+.chat{
+    border: 0.5px solid var(--grey);
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: var(--grey);
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    z-index: 3;
+    transition: all 200ms ease-in-out;
+    color: var(--white);
+}
+
+.chat:hover{
+    background: var(--backwhite);
+    color: var(--grey);
+}
+.chat-icon{
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    font-size: 2em;
+}
+
 /* ------MEDIA------ */
 
 @media (min-width:1024px){
@@ -546,6 +582,10 @@ footer{
     .login-flex{
         width: 50%;
     }
+    .chat{
+        bottom: 25px;
+        right: 25px;
+}
 }
 @media(max-width:420px){
     body{

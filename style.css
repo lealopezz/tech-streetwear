@@ -473,6 +473,38 @@ footer{
     font-size: 2em;
 }
 
+/* ------ABOUT----- */
+.about{
+    font-size: 0.8em;
+    letter-spacing: 0.15em;
+    width: 80%;
+    margin:auto;
+    margin-bottom: 10em;
+    line-height: 2.5em;
+}
+.about-title{
+    display: flex;
+    line-height: 3em;
+    justify-content: flex-start;
+    width: 80%;
+    margin:5em auto;
+}
+
+.about-flex{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    flex-direction: column;
+}
+.about-item{
+    display: block;
+    text-align: center;
+    margin: 2em 0;
+}
+.about-item h1{
+    padding-bottom: 1.5em;
+}
 /* ------MEDIA------ */
 
 @media (min-width:1024px){
@@ -579,7 +611,7 @@ footer{
         width: 95%;
         font-size: 0.65em;
     }
-    .login-flex{
+    .login-flex .about-flex{
         width: 50%;
     }
     .chat{

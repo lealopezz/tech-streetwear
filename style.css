@@ -101,7 +101,12 @@ body{
 .submenu{
     height: 0;
     overflow: hidden;
-    transition: all 250ms;
+    transition: all 250ms ease-in-out;
+}
+.fa-angle-down{
+    font-size: 1.3em;
+    rotate: 90deg;
+    transition: all 250ms ease-in-out;
 }
 .submenu-btn{
     display: flex;
@@ -565,10 +570,6 @@ footer{
     .container-submenu:hover .submenu {
         opacity: 1;
         visibility: visible;
-    }
-    .fa-angle-down{
-        transition: all 300ms;
-        rotate: 90deg;
     }
     .container-submenu:hover .fa-angle-down{
         rotate: 0deg;
